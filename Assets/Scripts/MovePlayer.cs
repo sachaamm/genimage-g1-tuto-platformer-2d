@@ -28,5 +28,9 @@ public class MovePlayer : MonoBehaviour
         {
             player.transform.Translate(new Vector3(2, 0, 0) * vitesse);
         }
-    }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            player.transform.Translate(new Vector3(0, 1, 0) * vitesse);
+        }
+}
 }
