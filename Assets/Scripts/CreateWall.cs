@@ -12,16 +12,16 @@ public class CreateWall : MonoBehaviour
 
         for (int y = 0; y < wallHeight; y++)
         {
-            for (int x = 0; x < wallWidth; x++)
+            for (int i = 0; i < wallWidth; i++)
             {
                 GameObject newCube = Instantiate(Cube);
-                newCube.transform.position = new Vector3(x, y, 5);
+                newCube.transform.position = new Vector3(i, y, 5);
             }
         }
     }
 
     void Update()
     {
-
+        
     }
 }

@@ -157,10 +157,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4cd45e19834fb24d8585acafee97efb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0adba0eae105b6d4cba3b5b7bf750e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 8343220438219036181, guid: 19e0f2297afec6c4e8aa12d2a0f7b9c7, type: 3}
+  cube: {fileID: 1726653629704923235, guid: 7c3204216572629439fd81e5345c9986, type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
