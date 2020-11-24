@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 962913110}
-  vitesseDeplacement: 0.05
+  vitesseDeplacement: 25
   vitesseDeplacementAir: 25
   jumpPower: 3000
   rg: {fileID: 962913114}

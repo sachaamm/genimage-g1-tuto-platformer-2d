@@ -31,7 +31,7 @@ public class MovePlayer : MonoBehaviour
            if (isGrounded)
             {
                 // rg.MovePosition(playerpos + new Vector3(-2, 0, 0) * vitesseDeplacement);
-                forceDeplacement += new Vector3(2, 0, 0) * vitesseDeplacement;
+                forceDeplacement += new Vector3(-2, 0, 0) * vitesseDeplacement;
             }
             else
             {
