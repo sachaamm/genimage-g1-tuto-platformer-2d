@@ -30,7 +30,8 @@ public class MovePlayer : MonoBehaviour
         {
            if (isGrounded)
             {
-                rg.MovePosition(playerpos + new Vector3(-2, 0, 0) * vitesseDeplacement);
+                // rg.MovePosition(playerpos + new Vector3(-2, 0, 0) * vitesseDeplacement);
+                forceDeplacement += new Vector3(2, 0, 0) * vitesseDeplacement;
             }
             else
             {
@@ -43,14 +44,15 @@ public class MovePlayer : MonoBehaviour
         {
            if (isGrounded)
             {
-                rg.MovePosition(playerpos + new Vector3(2, 0, 0) * vitesseDeplacement);
+                // rg.MovePosition(playerpos + new Vector3(2, 0, 0) * vitesseDeplacement);
+                forceDeplacement += new Vector3(2, 0, 0) * vitesseDeplacement;
             }
            else 
             {
                 forceDeplacement += new Vector3(2, 0, 0) * vitesseDeplacementAir;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             forceDeplacement += new Vector3(0, 1, 0) * jumpPower;         
         }
