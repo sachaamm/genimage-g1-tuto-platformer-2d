@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 962913110}
   vitesseDeplacement: 0.05
-  vitesseDeplacementAir: 100
+  vitesseDeplacementAir: 25
   jumpPower: 3000
   rg: {fileID: 962913114}
 --- !u!50 &962913114
@@ -236,7 +236,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0

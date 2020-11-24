@@ -10,6 +10,7 @@ public class MovePlayer : MonoBehaviour
     public float jumpPower = 0.2f;
     public Rigidbody2D rg;
     bool isGrounded = true;
+
        
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class MovePlayer : MonoBehaviour
     {
         // Si j'appuie sur la fleche de gauche
         // Je deplace le joueur à gauche
+
+        Vector3 forceDeplacement = new Vector3();
         Vector3 playerpos = transform.position;
         if( Input.GetKey( KeyCode.LeftArrow))
         {
@@ -31,7 +34,7 @@ public class MovePlayer : MonoBehaviour
             }
             else
             {
-                rg.AddForce(new Vector3(-2, 0, 0) * vitesseDeplacementAir);
+                forceDeplacement += new Vector3(-2, 0, 0) * vitesseDeplacementAir;
             }
         }
         
@@ -44,15 +47,17 @@ public class MovePlayer : MonoBehaviour
             }
            else 
             {
-                rg.AddForce(new Vector3(2, 0, 0) * vitesseDeplacementAir);
+                forceDeplacement += new Vector3(2, 0, 0) * vitesseDeplacementAir;
             }
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-           
-            rg.AddForce(new Vector3(0, 1, 0) * jumpPower);
+            forceDeplacement += new Vector3(0, 1, 0) * jumpPower;         
         }
-}
+        
+        rg.AddForce(forceDeplacement);
+    }
+     
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
