@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,13 +12,13 @@ public class MovePlayer : MonoBehaviour
     public Rigidbody2D rg;
     bool isGrounded = true;
 
-       
+    
     // Start is called before the first frame update
     void Start()
     {
        
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -68,5 +69,10 @@ public class MovePlayer : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
+    }
+    
+    public bool IsGrounded()
+    {
+        return isGrounded;
     }
 }
