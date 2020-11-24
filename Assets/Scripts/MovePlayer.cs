@@ -11,6 +11,7 @@ public class MovePlayer : MonoBehaviour
     public float jumpPower = 0.2f;
     public Rigidbody2D rg;
     bool isGrounded = true;
+    bool isMoving = false;
 
     
     // Start is called before the first frame update
@@ -27,7 +28,9 @@ public class MovePlayer : MonoBehaviour
 
         Vector3 forceDeplacement = new Vector3();
         Vector3 playerpos = transform.position;
-        if( Input.GetKey( KeyCode.LeftArrow))
+        isMoving = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow);
+
+        if ( Input.GetKey( KeyCode.LeftArrow))
         {
            if (isGrounded)
             {
@@ -53,7 +56,7 @@ public class MovePlayer : MonoBehaviour
                 forceDeplacement += new Vector3(2, 0, 0) * vitesseDeplacementAir;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             forceDeplacement += new Vector3(0, 1, 0) * jumpPower;         
         }
@@ -74,5 +77,10 @@ public class MovePlayer : MonoBehaviour
     public bool IsGrounded()
     {
         return isGrounded;
+    }
+
+    public bool IsMoving()
+    {
+        return isMoving;
     }
 }

@@ -285,6 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rg: {fileID: 962913114}
   ratio: 1.01
+  ratioHorizontal: 1.5
 --- !u!114 &962913117
 MonoBehaviour:
   m_ObjectHideFlags: 0
