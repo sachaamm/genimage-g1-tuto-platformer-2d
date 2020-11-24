@@ -6,10 +6,11 @@ public class MovePlayer : MonoBehaviour
 {
     public GameObject player;
     public float vitesseDeplacement = 0.05f;
+    public float vitesseDeplacementAir = 0.05f;
     public float jumpPower = 0.2f;
     public Rigidbody2D rg;
     bool isGrounded = true;
-        
+       
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,7 @@ public class MovePlayer : MonoBehaviour
             }
             else
             {
-                rg.AddForce(new Vector3(-2, 0, 0) * vitesseDeplacement);
+                rg.AddForce(new Vector3(-2, 0, 0) * vitesseDeplacementAir);
             }
         }
         
@@ -43,12 +44,12 @@ public class MovePlayer : MonoBehaviour
             }
            else 
             {
-                rg.AddForce(new Vector3(2, 0, 0) * vitesseDeplacement);
+                rg.AddForce(new Vector3(2, 0, 0) * vitesseDeplacementAir);
             }
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            // player.transform.Translate(new Vector3(0, 1, 0) * jumpPower);
+           
             rg.AddForce(new Vector3(0, 1, 0) * jumpPower);
         }
 }
