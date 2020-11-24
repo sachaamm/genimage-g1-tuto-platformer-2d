@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class EndLevel : MonoBehaviour
+ 
 {
+    public string nextLevel = "toto";
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class EndLevel : MonoBehaviour
     }
     void LevelEnd()
     {
-        print("finNiveau");
+        
+        SceneManager.LoadScene(nextLevel);
     }
 }
