@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 962913113}
   - component: {fileID: 962913114}
   - component: {fileID: 962913115}
+  - component: {fileID: 962913116}
+  - component: {fileID: 962913117}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -218,9 +220,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 962913110}
-  vitesseDeplacement: 25
-  vitesseDeplacementAir: 25
-  jumpPower: 3000
+  vitesseDeplacement: 50
+  vitesseDeplacementAir: 50
+  jumpPower: 6000
   rg: {fileID: 962913114}
 --- !u!50 &962913114
 Rigidbody2D:
@@ -269,6 +271,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &962913116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962913110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a698895ea0993bc4d894474710666e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 962913114}
+  ratio: 1.01
+--- !u!114 &962913117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962913110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27be8a4e15bb44428537203134416c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityAmount: 40
 --- !u!1 &1825357507
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +408,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1954166191}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8abe36898284d4842822828915426983, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -551,7 +580,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1980535065}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8abe36898284d4842822828915426983, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
