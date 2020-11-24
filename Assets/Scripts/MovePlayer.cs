@@ -22,16 +22,29 @@ public class MovePlayer : MonoBehaviour
         // Si j'appuie sur la fleche de gauche
         // Je deplace le joueur à gauche
         Vector3 playerpos = transform.position;
-        if( Input.GetKey( KeyCode.LeftArrow) && isGrounded)
+        if( Input.GetKey( KeyCode.LeftArrow))
         {
-           // rg.(new Vector3(-2, 0, 0) * vitesseDeplacement);
-           rg.MovePosition(playerpos + new Vector3(-2, 0, 0) * vitesseDeplacement);
-
+           if (isGrounded)
+            {
+                rg.MovePosition(playerpos + new Vector3(-2, 0, 0) * vitesseDeplacement);
+            }
+            else
+            {
+                rg.AddForce(new Vector3(-2, 0, 0) * vitesseDeplacement);
+            }
         }
-        if (Input.GetKey(KeyCode.RightArrow) && isGrounded)
+        
+
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-           // player.transform.Translate(new Vector3(2, 0, 0) * vitesseDeplacement);
-           rg.MovePosition(playerpos + new Vector3(2, 0, 0) * vitesseDeplacement);
+           if (isGrounded)
+            {
+                rg.MovePosition(playerpos + new Vector3(2, 0, 0) * vitesseDeplacement);
+            }
+           else 
+            {
+                rg.AddForce(new Vector3(2, 0, 0) * vitesseDeplacement);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
