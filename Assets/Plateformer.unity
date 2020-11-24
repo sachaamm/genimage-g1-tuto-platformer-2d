@@ -218,6 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 962913110}
+  vitesseDeplacement: 0.05
+  jumpPower: 2
 --- !u!50 &962913114
 Rigidbody2D:
   serializedVersion: 4

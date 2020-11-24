@@ -5,7 +5,8 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     public GameObject player;
-    float vitesse = 0.05f;
+    public float vitesseDeplacement = 0.05f;
+    public float jumpPower = 0.2f;
 
         
     // Start is called before the first frame update
@@ -21,16 +22,16 @@ public class MovePlayer : MonoBehaviour
         // Je deplace le joueur à gauche
         if( Input.GetKey( KeyCode.LeftArrow))
         {
-            player.transform.Translate(new Vector3(-2, 0, 0) * vitesse);
+            player.transform.Translate(new Vector3(-2, 0, 0) * vitesseDeplacement);
            
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            player.transform.Translate(new Vector3(2, 0, 0) * vitesse);
+            player.transform.Translate(new Vector3(2, 0, 0) * vitesseDeplacement);
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            player.transform.Translate(new Vector3(0, 1, 0) * vitesse);
+            player.transform.Translate(new Vector3(0, 1, 0) * jumpPower);
         }
 }
 }
