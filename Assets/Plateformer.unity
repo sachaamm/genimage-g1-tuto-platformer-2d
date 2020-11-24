@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 962913110}
   vitesseDeplacement: 0.05
-  jumpPower: 2
+  jumpPower: 250
   rg: {fileID: 962913114}
 --- !u!50 &962913114
 Rigidbody2D:

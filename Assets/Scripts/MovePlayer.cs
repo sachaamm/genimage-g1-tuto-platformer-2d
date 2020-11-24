@@ -36,7 +36,7 @@ public class MovePlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // player.transform.Translate(new Vector3(0, 1, 0) * jumpPower);
-            rg.MovePosition(playerpos + new Vector3(0, 1, 0) * jumpPower);
+            rg.AddForce(new Vector3(0, 1, 0) * jumpPower);
         }
 }
 }
