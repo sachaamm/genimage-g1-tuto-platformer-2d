@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 962913113}
   - component: {fileID: 962913114}
   - component: {fileID: 962913115}
+  - component: {fileID: 962913116}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -218,9 +219,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 962913110}
-  vitesseDeplacement: 25
-  vitesseDeplacementAir: 25
-  jumpPower: 3000
+  vitesseDeplacement: 50
+  vitesseDeplacementAir: 50
+  jumpPower: 6000
   rg: {fileID: 962913114}
 --- !u!50 &962913114
 Rigidbody2D:
@@ -269,6 +270,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &962913116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962913110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a698895ea0993bc4d894474710666e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 962913114}
+  ratio: 1
 --- !u!1 &1825357507
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +451,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e1ca03ed2b61c8c4f9fcc60935c016c2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7169812, g: 0.57743686, b: 0.13866144, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -518,7 +533,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e1ca03ed2b61c8c4f9fcc60935c016c2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7169812, g: 0.57743686, b: 0.13866144, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
