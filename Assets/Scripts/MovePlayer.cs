@@ -17,7 +17,7 @@ public class MovePlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        // Debug.Log("Screen height " + Screen.height);
     }
     
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class MovePlayer : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            forceDeplacement += new Vector3(0, 1, 0) * jumpPower;         
+            forceDeplacement += new Vector3(0, 1, 0) * jumpPower * Responsive.ResponsiveHeight();         
         }
         
         rg.AddForce(forceDeplacement);

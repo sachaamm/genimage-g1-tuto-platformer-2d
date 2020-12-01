@@ -19,11 +19,11 @@ public class DeadZoneMove : MonoBehaviour
         // Si jamais "Time.FrameCount" % cycle < cycle/2: je vais vers le haut, sinon, je vais vers le bas.
         if (Time.frameCount % cycle < cycle / 2)
         {
-            transform.position += new Vector3(0, 1 * Time.deltaTime, 0)* moveAmount;
+            transform.position += new Vector3(0, 1 * Time.deltaTime, 0) * moveAmount * Responsive.ResponsiveHeight();
         }
         else
         {
-            transform.position += new Vector3(0, -1 * Time.deltaTime, 0)* moveAmount;
+            transform.position += new Vector3(0, -1 * Time.deltaTime, 0) * moveAmount * Responsive.ResponsiveHeight();
         }
     }
 }

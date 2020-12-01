@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 2072127465}
   - component: {fileID: 2072127464}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: MovableSquare
   m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
