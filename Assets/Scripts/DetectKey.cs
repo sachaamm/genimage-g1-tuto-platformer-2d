@@ -16,8 +16,12 @@ public class DetectKey : MonoBehaviour
             Key key = objectCollision.GetComponent<Key>();
             if (key != null)
             {
-                GameObject deadZone = key.deadZone;
-                Destroy(deadZone);
+                GameObject[] deadZones = key.deadZones;
+                for(int i = 0; i < deadZones.Length; i++)
+                {
+                    Destroy(deadZones[i]);
+                }
+
                 Destroy(objectCollision);
             }
         }

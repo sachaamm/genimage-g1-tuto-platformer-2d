@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    public GameObject deadZone;
+    public GameObject[] deadZones;
 
     // Start is called before the first frame update
     void Start()
