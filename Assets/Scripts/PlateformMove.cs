@@ -27,13 +27,13 @@ public class PlateformMove : MonoBehaviour
         if (counter % cycle < cycle / 2)
         {
             // transform.position += direction * Time.deltaTime * moveAmount;
-            _rigidbody2D.MovePosition(transform.position + (direction * Time.deltaTime * moveAmount));
+            _rigidbody2D.MovePosition(transform.position + (direction * moveAmount));
             
         }
         else
         {
             // transform.position -= direction * Time.deltaTime * moveAmount;
-            _rigidbody2D.MovePosition(transform.position - (direction * Time.deltaTime * moveAmount));
+            _rigidbody2D.MovePosition(transform.position - (direction * moveAmount));
         }
     }
 }

@@ -16,6 +16,6 @@ public class CaptureFrameRate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FrameRateText.text = "FR: " + Time.deltaTime;
+        if(FrameRateText) FrameRateText.text = "FR: " + Time.deltaTime;
     }
 }
