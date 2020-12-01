@@ -876,8 +876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 962913110}
-  vitesseDeplacement: 50
-  vitesseDeplacementAir: 50
+  vitesseDeplacement: 100
+  vitesseDeplacementAir: 100
   jumpPower: 6000
   rg: {fileID: 962913114}
 --- !u!50 &962913114
