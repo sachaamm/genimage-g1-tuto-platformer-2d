@@ -9,6 +9,7 @@ TagManager:
   - DeadZone
   - EndLevel
   - Portal
+  - Key
   layers:
   - Default
   - TransparentFX
