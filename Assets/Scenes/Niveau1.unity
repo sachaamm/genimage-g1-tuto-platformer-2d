@@ -532,6 +532,7 @@ GameObject:
   - component: {fileID: 897921606}
   - component: {fileID: 897921605}
   - component: {fileID: 897921604}
+  - component: {fileID: 897921607}
   m_Layer: 0
   m_Name: MovingPlateform02
   m_TagString: Untagged
@@ -644,6 +645,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &897921607
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897921602}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &952100631
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +992,7 @@ GameObject:
   - component: {fileID: 1361272502}
   - component: {fileID: 1361272501}
   - component: {fileID: 1361272503}
+  - component: {fileID: 1361272504}
   m_Layer: 0
   m_Name: MovingPlateform01
   m_TagString: Untagged
@@ -1082,6 +1105,27 @@ MonoBehaviour:
   cycle: 1000
   moveAmount: 5
   direction: {x: 1, y: 0, z: 0}
+--- !u!50 &1361272504
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361272499}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1645675354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806391046}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 91.8, y: 12.2, z: 2.1308594}
+  m_LocalPosition: {x: 91.8, y: 5.8, z: 2.1308594}
   m_LocalScale: {x: 5, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 128297852}

@@ -13,6 +13,7 @@ public class MovePlayer : MonoBehaviour
     bool isGrounded = true;
     bool isMoving = false;
 
+    Vector3 forceDeplacement = new Vector3();
     
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class MovePlayer : MonoBehaviour
         // Si j'appuie sur la fleche de gauche
         // Je deplace le joueur à gauche
 
-        Vector3 forceDeplacement = new Vector3();
+        forceDeplacement = new Vector3();
         Vector3 playerpos = transform.position;
         isMoving = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow);
 
@@ -43,7 +44,6 @@ public class MovePlayer : MonoBehaviour
             }
         }
         
-
         if (Input.GetKey(KeyCode.RightArrow))
         {
            if (isGrounded)
@@ -58,12 +58,17 @@ public class MovePlayer : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            forceDeplacement += new Vector3(0, 1, 0) * jumpPower * Responsive.ResponsiveHeight();         
+            forceDeplacement += new Vector3(0, 1, 0) * jumpPower;         
         }
         
         rg.AddForce(forceDeplacement);
     }
-     
+
+    private void FixedUpdate()
+    {
+        
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
