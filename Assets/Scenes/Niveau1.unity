@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cycle: 1000
-  moveAmount: 5
+  moveAmount: 2
   direction: {x: 0, y: 1, z: 0}
 --- !u!61 &897921605
 BoxCollider2D:

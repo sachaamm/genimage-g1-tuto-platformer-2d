@@ -20,11 +20,11 @@ public class PlateformMove : MonoBehaviour
         // Si jamais "Time.FrameCount" % cycle < cycle/2: je vais vers le haut, sinon, je vais vers le bas.
         if (Time.frameCount % cycle < cycle / 2)
         {
-            transform.position += direction * Time.deltaTime * moveAmount * Responsive.ResponsiveHeight();
+            transform.position += direction * Time.deltaTime * moveAmount;
         }
         else
         {
-            transform.position -= direction * Time.deltaTime * moveAmount * Responsive.ResponsiveHeight();
+            transform.position -= direction * Time.deltaTime * moveAmount;
         }
     }
 }

@@ -9,4 +9,15 @@ public static class Responsive
     {
         return (float)Screen.height / 593;
     }
+    
+    public static float ResponsiveWidth()
+    {
+        return (float)Screen.width / 750;
+    }
+
+    public static float ResponsiveRatio()
+    {
+        return ResponsiveWidth() * ResponsiveHeight();
+    }
+    
 }

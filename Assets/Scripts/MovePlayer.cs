@@ -17,7 +17,7 @@ public class MovePlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Debug.Log("Screen height " + Screen.height);
+         Debug.Log("Screen height " + Screen.width);
     }
     
     // Update is called once per frame
