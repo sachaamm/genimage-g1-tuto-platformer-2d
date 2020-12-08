@@ -25,8 +25,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6586218045628855489}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.17, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9187873011013164329}
@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 3516351184242044107}
   - component: {fileID: 8616519809029240498}
   - component: {fileID: 1548094928}
+  - component: {fileID: 3581001435670978274}
   m_Layer: 0
   m_Name: Player
   m_TagString: player
@@ -184,7 +185,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e1ca03ed2b61c8c4f9fcc60935c016c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ce5b21519fd8a34fa36d81784e2223b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,7 +242,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9187873011013164327}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -258,7 +259,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9964363, y: 0.99134755}
+  m_Size: {x: 0.61, y: 0.81}
   m_EdgeRadius: 0
 --- !u!114 &9187873011013164333
 MonoBehaviour:
@@ -380,3 +381,19 @@ MonoBehaviour:
   robot: {fileID: 6586218045628855489}
   orientationText: {fileID: 0}
   MovePlayer: {fileID: 9187873011013164328}
+--- !u!58 &3581001435670978274
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9187873011013164327}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
