@@ -188,11 +188,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9187873011013164334, guid: 8ebca7e9e83154445b9cf391ee0935c3,
-        type: 3}
-      propertyPath: nextLevel
-      value: Niveau3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebca7e9e83154445b9cf391ee0935c3, type: 3}
 --- !u!1 &646017467
@@ -397,8 +392,8 @@ GameObject:
   - component: {fileID: 1682813256}
   - component: {fileID: 1682813255}
   m_Layer: 0
-  m_Name: Square (5)
-  m_TagString: Untagged
+  m_Name: Platform
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,8 +795,8 @@ GameObject:
   - component: {fileID: 3570125875425779132}
   - component: {fileID: 3570125875425779133}
   m_Layer: 0
-  m_Name: Square (2)
-  m_TagString: Untagged
+  m_Name: Platform
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -908,8 +903,8 @@ GameObject:
   - component: {fileID: 3570125875693463996}
   - component: {fileID: 3570125875693463997}
   m_Layer: 0
-  m_Name: Square (1)
-  m_TagString: Untagged
+  m_Name: Platform
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1042,8 +1037,8 @@ GameObject:
   - component: {fileID: 3570125875730255127}
   - component: {fileID: 3570125875730255121}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: Platform
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1214,8 +1209,8 @@ GameObject:
   - component: {fileID: 3570125876042686964}
   - component: {fileID: 3570125876042686965}
   m_Layer: 0
-  m_Name: Square (6)
-  m_TagString: Untagged
+  m_Name: Platform
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1264,8 +1259,8 @@ GameObject:
   - component: {fileID: 3570125877040349091}
   - component: {fileID: 3570125877040349088}
   m_Layer: 0
-  m_Name: Square (4)
-  m_TagString: Untagged
+  m_Name: Platform
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

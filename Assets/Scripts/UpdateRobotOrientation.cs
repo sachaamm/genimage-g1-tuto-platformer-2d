@@ -44,7 +44,7 @@ public class UpdateRobotOrientation : MonoBehaviour
             }
         }
 
-        orientationText.text = currentOrientation.ToString();
+        // orientationText.text = currentOrientation.ToString();
         
         UpdateOrientation();
     }
@@ -75,7 +75,8 @@ public class UpdateRobotOrientation : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "platform")
+        if (collision.transform.tag == "platform" || 
+            collision.transform.tag == "Untagged")
         {
             platform = collision.transform.gameObject;
             currentOrientation = DetermineOrientation(platform);
