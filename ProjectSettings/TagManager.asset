@@ -12,6 +12,8 @@ TagManager:
   - Key
   - Trampo
   - platform
+  - fire
+  - Ennemi
   layers:
   - Default
   - TransparentFX
