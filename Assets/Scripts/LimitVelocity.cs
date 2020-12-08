@@ -26,6 +26,8 @@ public class LimitVelocity : MonoBehaviour
         {
             rg.velocity = new Vector3(rg.velocity.x / ratioHorizontal, rg.velocity.y, 0) / ratio;
         }
+
+        // rg.velocity /= ratioHorizontal;
         
         rg.angularVelocity = rg.angularVelocity / ratio;
     }

@@ -22,6 +22,8 @@ public class MovePlayer : MonoBehaviour
          Debug.Log("Screen height " + Screen.width);
     }
     
+    
+    
     // Update is called once per frame
     void Update()
     {
