@@ -20,12 +20,14 @@ public class Ennemi : MonoBehaviour
             float dist = Vector3.Distance(player.transform.position, transform.position);
             if ( dist < distanceToFollow)
             {
-            transform.position = Vector3.Lerp(transform.position , player.transform.position , 0.5f);
+            transform.position = Vector3.Lerp(transform.position , player.transform.position , 0.01f);
             }
             if ( dist < distanceToExplode)
             {
-
-            transform.position = Vector3.Lerp(transform.position , player.transform.position , 0.5f);
+            //  todo
+            Health health;
+            health = player.GetComponent<Health>();
+            health.RecevoirDegats(1); 
             }
 
     }
