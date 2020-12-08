@@ -33,7 +33,7 @@ public class MovePlayer : MonoBehaviour
         forceDeplacement = new Vector3();
         Vector3 playerpos = transform.position;
         isMoving = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow);
-        animator.SetBool("walk", isMoving);
+        animator.SetBool("walk", isMoving); 
 
         if ( Input.GetKey( KeyCode.LeftArrow))
         {
@@ -60,7 +60,7 @@ public class MovePlayer : MonoBehaviour
                 forceDeplacement += new Vector3(2, 0, 0) * vitesseDeplacementAir;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetMouseButtonDown(0) && isGrounded)
         {
             forceDeplacement += new Vector3(0, 1, 0) * jumpPower;         
         }

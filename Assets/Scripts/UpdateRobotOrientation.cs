@@ -11,7 +11,7 @@ public class UpdateRobotOrientation : MonoBehaviour
 
     public MovePlayer MovePlayer;
     
-    enum Orientation
+    public enum Orientation
     {
         Top, // Platform_OnBottom
         Bottom, // Platform_OnTop
@@ -19,7 +19,7 @@ public class UpdateRobotOrientation : MonoBehaviour
         Left, // Platform_OnRight
     }
 
-    private Orientation currentOrientation = Orientation.Top;
+    public Orientation currentOrientation = Orientation.Top;
     
     
     // Start is called before the first frame update
@@ -128,5 +128,29 @@ public class UpdateRobotOrientation : MonoBehaviour
         
         // On est obligés de renvoyés une valeur dans tous les cas.
         return Orientation.Top;
+    }
+    public Vector3 BulletSpawnPointOffset()
+    {
+        Vector3 offset = new Vector3();
+
+        switch (currentOrientation)
+        {
+            case Orientation.Top:
+                offset = new Vector3(0, 1, 0);
+                break;
+
+            case Orientation.Bottom:
+                offset = new Vector3(0, -1, 0);
+                break;
+            case Orientation.Left:
+                offset = new Vector3(-1, 0, 0);
+                break;
+
+            case Orientation.Right:
+                offset = new Vector3(1, 0, 0);
+                break;
+
+        }
+        return offset;
     }
 }

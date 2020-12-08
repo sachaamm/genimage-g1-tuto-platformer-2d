@@ -6,31 +6,35 @@ public class Shoot : MonoBehaviour
 {
 
     public GameObject bulletPrefab;
-
-    public GameObject bulletSpawnPoint;
-    
+  
     private int counter = 0;
     public int cycleShoot = 40;
 
     public float shootPower = 200;
 
     public float bulletLifetime = 5;
-    
+
+    UpdateRobotOrientation robotOrientation;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        robotOrientation = GetComponent<UpdateRobotOrientation>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (counter % cycleShoot == 0)
+        counter++;
+        if (counter % cycleShoot == 0 && Input.GetMouseButton(1))
         {
+            var mousePos = Input.mousePosition;
+            Vector3 bulletSpawnPoint = transform.position + robotOrientation.BulletSpawnPointOffset();
+            Vector3 diff = mousePos - bulletSpawnPoint;           
             GameObject newBullet = Instantiate(bulletPrefab);
-            newBullet.transform.position = bulletSpawnPoint.transform.position;
+            newBullet.transform.position = bulletSpawnPoint;
             Rigidbody2D newBulletRg = newBullet.GetComponent<Rigidbody2D>();
-            newBulletRg.AddForce(new Vector2(0,1) * shootPower);
+            newBulletRg.AddForce(diff.normalized * shootPower);
             
             Destroy(newBullet, bulletLifetime);
         }
