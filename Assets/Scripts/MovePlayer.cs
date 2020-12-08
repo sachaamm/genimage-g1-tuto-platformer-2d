@@ -12,6 +12,7 @@ public class MovePlayer : MonoBehaviour
     public Rigidbody2D rg;
     bool isGrounded = true;
     bool isMoving = false;
+    public Animator animator;
 
     Vector3 forceDeplacement = new Vector3();
     
@@ -30,6 +31,7 @@ public class MovePlayer : MonoBehaviour
         forceDeplacement = new Vector3();
         Vector3 playerpos = transform.position;
         isMoving = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow);
+        animator.SetBool("walk", isMoving);
 
         if ( Input.GetKey( KeyCode.LeftArrow))
         {
