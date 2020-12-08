@@ -11,6 +11,7 @@ TagManager:
   - Portal
   - Key
   - Trampo
+  - platform
   layers:
   - Default
   - TransparentFX
