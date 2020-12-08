@@ -1005,7 +1005,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7914302674220859697, guid: b39ee736890d2114f94e115ef745553b,
     type: 3}
   cycleShoot: 10
-  shootPower: 500
+  shootPower: 1000
   bulletLifetime: 5
 --- !u!1 &1039410810
 GameObject:

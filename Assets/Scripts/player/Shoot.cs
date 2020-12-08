@@ -28,13 +28,13 @@ public class Shoot : MonoBehaviour
         counter++;
         if (counter % cycleShoot == 0 && Input.GetMouseButton(1))
         {
-            var mousePos = Input.mousePosition;
+            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 bulletSpawnPoint = transform.position + robotOrientation.BulletSpawnPointOffset();
-            Vector3 diff = mousePos - bulletSpawnPoint;           
+            Vector3 diff = bulletSpawnPoint - mousePos;            
             GameObject newBullet = Instantiate(bulletPrefab);
             newBullet.transform.position = bulletSpawnPoint;
             Rigidbody2D newBulletRg = newBullet.GetComponent<Rigidbody2D>();
-            newBulletRg.AddForce(diff.normalized * shootPower);
+            newBulletRg.AddForce(-diff.normalized * shootPower);
             
             Destroy(newBullet, bulletLifetime);
         }
