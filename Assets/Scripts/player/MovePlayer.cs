@@ -11,6 +11,7 @@ public class MovePlayer : MonoBehaviour
     public float jumpPower = 0.2f;
     public Rigidbody2D rg;
     bool isGrounded = true;
+    bool canDoubleJump;
     bool isMoving = false;
     public Animator animator;
 
@@ -60,11 +61,25 @@ public class MovePlayer : MonoBehaviour
                 forceDeplacement += new Vector3(2, 0, 0) * vitesseDeplacementAir;
             }
         }
-        if (Input.GetMouseButtonDown(0) && isGrounded)
+        if (isGrounded)
         {
-            forceDeplacement += new Vector3(0, 1, 0) * jumpPower;         
+            canDoubleJump = true;
         }
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isGrounded)
+            {
+                forceDeplacement += new Vector3(0, 1, 0) * jumpPower;
+            }
+            else
+            {
+                if (canDoubleJump)
+                {
+                    forceDeplacement += new Vector3(0, 1, 0) * jumpPower;
+                    canDoubleJump = false;
+                }
+            }
+        }     
         rg.AddForce(forceDeplacement);
     }
 

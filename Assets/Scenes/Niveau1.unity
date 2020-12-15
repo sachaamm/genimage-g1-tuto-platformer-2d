@@ -1095,6 +1095,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9187873011013164328, guid: 8ebca7e9e83154445b9cf391ee0935c3,
+        type: 3}
+      propertyPath: jumpPower
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 9187873011013164329, guid: 8ebca7e9e83154445b9cf391ee0935c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1230,7 +1235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446750037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.269, y: 1, z: 0}
+  m_LocalPosition: {x: 9.28, y: 1.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1249,7 +1254,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.059854507, y: -0.30675197}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1260,7 +1265,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.92, y: 2.56}
+  m_Size: {x: 1.0521164, y: 1.946496}
   m_EdgeRadius: 0
 --- !u!50 &1446750041
 Rigidbody2D:
@@ -1295,7 +1300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce42fa7e25d1b54db50400791e0c6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceMin: 4.5
+  distanceToFollow: 15
+  distanceToExplode: 1.5
+  cycle: 100
+  moveAmount: 0.1
+  direction: {x: 1, y: 0, z: 0}
 --- !u!1 &1645675354
 GameObject:
   m_ObjectHideFlags: 0
